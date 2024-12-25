@@ -7,9 +7,12 @@ const allDivs = [...document.querySelectorAll('.all')]
 
 const onColorchange =(eve) =>{
     let selectedClassName = eve.target.value
-    allDivs.forEach(div => {
-        div.classList.add('d-none')
-    })
+    if (!selectedClassName.includes('all')){
+        allDivs.forEach(div => {
+            div.classList.add('d-none')
+        })
+    }
+    
     let selectedDivs = [...document.querySelectorAll("."+ selectedClassName)];
 
     selectedDivs.forEach(div => div.classList.remove('d-none'))
