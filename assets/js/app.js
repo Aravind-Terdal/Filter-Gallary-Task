@@ -2,7 +2,7 @@ const cl = console.log;
 
 const selectColor = document.getElementById('SelectColor');
 
-const allDivs = [...document.querySelectorAll('.all')]
+const allDivs = [...document.querySelectorAll('.all')];
 
 
 const onColorchange =(eve) =>{
